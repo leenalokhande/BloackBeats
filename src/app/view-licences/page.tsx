@@ -364,7 +364,7 @@ export default function ViewLicenses() {
             <p className="text-gray-300 max-w-xl mb-8">
               You don&apos;t have any music licenses yet. Create your first license to start managing your music rights on the blockchain.
             </p>
-            <Link href="/create-license" className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-xl font-medium shadow-lg transition-all">
+            <Link href="/create-licence" className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-xl font-medium shadow-lg transition-all">
               Create Your First License
             </Link>
           </div>
