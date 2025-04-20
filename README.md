@@ -1,6 +1,5 @@
 # BlockBeats
 
-![BlockBeats Logo](public/images/logo.png)
 
 BlockBeats is a decentralized music licensing platform built on the Arbitrum blockchain, providing a transparent, fair, and efficient way for artists to license their music directly to users.
 
