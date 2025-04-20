@@ -362,7 +362,7 @@ export default function ViewLicenses() {
             <HiOutlineMusicNote className="text-7xl text-gray-500 mb-6" />
             <h3 className="text-2xl font-bold mb-3">No Licenses Found</h3>
             <p className="text-gray-300 max-w-xl mb-8">
-              You don't have any music licenses yet. Create your first license to start managing your music rights on the blockchain.
+              You don&apos;t have any music licenses yet. Create your first license to start managing your music rights on the blockchain.
             </p>
             <Link href="/create-license" className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-xl font-medium shadow-lg transition-all">
               Create Your First License
