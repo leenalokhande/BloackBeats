@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { FaMusic } from "react-icons/fa";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +27,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700`}
       >
+           <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white overflow-hidden">
+        <Navbar/>
         {children}
+        <footer className="border-t border-white/10 bg-black/30 backdrop-blur-md py-10 mt-10 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <div className="flex items-center justify-center space-x-2 mb-6">
+            <FaMusic className="h-8 w-8 text-pink-400" />
+            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400">BlockBeats</span>
+          </div>
+          <p className="text-gray-100 mb-6 max-w-2xl mx-auto">
+            BlockBeats is revolutionizing the music industry by creating a decentralized platform for music licensing on the Arbitrum blockchain.
+          </p>
+    
+          <p className="text-sm text-white">
+            Decentralized Music Licensing Platform © {new Date().getFullYear()}
+          </p>
+        </div>
+      </footer>
+      </div>
       </body>
     </html>
   );
