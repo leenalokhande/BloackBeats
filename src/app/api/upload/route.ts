@@ -19,19 +19,18 @@ export async function POST(request: NextRequest) {
     const fileName = fileObj.name;
     const fileType = fileObj.type;
 
-    // Validate allowed types: audio and JSON
+    // Validate allowed types: audio, JSON, and image
     const isAudio = fileType.startsWith("audio/");
     const isJson =
       fileType === "application/json" ||
       (fileType === "application/octet-stream" && fileName.endsWith(".json"));
-    
-    if (!isAudio && !isJson) {
-      return NextResponse.json({ error: "Only audio or JSON files are allowed" }, { status: 400 });
-    }
-    
+    const isImage = fileType.startsWith("image/");
 
-    if (!isAudio && !isJson) {
-      return NextResponse.json({ error: "Only audio or JSON files are allowed" }, { status: 400 });
+    if (!isAudio && !isJson && !isImage) {
+      return NextResponse.json(
+        { error: "Only audio, image, or JSON files are allowed" },
+        { status: 400 }
+      );
     }
 
     const timestamp = Date.now();
